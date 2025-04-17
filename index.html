@@ -30,6 +30,8 @@
   <script src="https://ghcdn.rawgit.org/chenzlabs/aframe-ar/fb69413/dist/aframe-ar.min.js"></script>
   
 	<script src="./main.js"></script>
+  <script src="https://unpkg.com/aframe-look-at-component@0.8.0/dist/aframe-look-at-component.min.js"></script>
+
   
   <script>
 
@@ -77,22 +79,29 @@
 </head>
 <body>
 
-<a-scene ar="worldSensing:true" raycaster-move="target:#mark">
+<a-scene ar="worldSensing:true" raycaster-move="target:#mark" cursor="rayOrigin: mouse">
 	<a-assets>
   <a-asset-item id="orchid" src="https://cdn.glitch.global/ded6f08b-aa57-4789-8309-05b6132a4efd/orchid2.glb?v=1744899329884"></a-asset-item>
+  <a-asset-item id="nameplate" src="https://cdn.glitch.global/ded6f08b-aa57-4789-8309-05b6132a4efd/foxgaltitle.glb?v=1744914952550"></a-asset-item>
   </a-assets>
   
   <!-- Use AR raycaster, and set raycaster to ignore all A-Frame objects like logos. -->
   <a-entity ar-raycaster raycaster="objects:none"></a-entity>
 
-	<a-camera position="0 1.2 0"></a-camera>
+	<a-camera id="camera" position="0 1.2 0">
+        <a-entity cursor="fuse: true; fuseTimeout: 500"
+            position="0 0 -1"
+            geometry="primitive: ring; radiusInner: 0.02; radiusOuter: 0.03"
+                  material="color: black; shader: flat"></a-entity>
+          </a-camera>
 
 	<!-- Environment for 2D and VR viewing. It's auto-hidden in AR mode. -->
 	<a-entity environment="preset: poison; lighting: none; shadow: none; lightPosition: 0 10 0"
 			  hide-in-ar-mode></a-entity>
 
   <a-entity gltf-model="#orchid" animation-mixer position="0 0 -5" scale=".7 .7 .7"></a-entity>
-
+  <a-entity gltf-model="#nameplate" position="0 2 -5" scale=".01 .01 .01"
+              look-at="#camera"></a-entity>
 	<a-entity light="type: ambient; intensity: 1;
               color: #FAFFC8
                   ;"></a-entity>
@@ -108,7 +117,7 @@
 			 id="light"
        intensity="1"
 			 target="orchid"
-			 position="4 10 2">
+			 position="4 10 2">aw
 	</a-light>
 
 </a-scene>
