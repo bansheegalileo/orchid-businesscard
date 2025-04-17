@@ -86,9 +86,9 @@
   </a-assets>
   
   <!-- Use AR raycaster, and set raycaster to ignore all A-Frame objects like logos. -->
-  <a-entity ar-raycaster raycaster="objects:none"></a-entity>
+  <a-entity id="person" ar-raycaster raycaster="objects:none"></a-entity>
 
-	<a-camera id="camera" position="0 1.2 0">
+	<a-camera position="0 1.2 0">
         <a-entity cursor="fuse: true; fuseTimeout: 500"
             position="0 0 -1"
             geometry="primitive: ring; radiusInner: 0.02; radiusOuter: 0.03"
@@ -101,7 +101,7 @@
 
   <a-entity gltf-model="#orchid" animation-mixer position="0 0 -5" scale=".7 .7 .7"></a-entity>
   <a-entity gltf-model="#nameplate" position="0 2 -5" scale=".01 .01 .01"
-              look-at="#camera"></a-entity>
+              look-at="#person"></a-entity>
 	<a-entity light="type: ambient; intensity: 1;
               color: #FAFFC8
                   ;"></a-entity>
