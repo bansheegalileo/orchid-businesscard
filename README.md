@@ -6,8 +6,7 @@ https://github.com/bansheegalileo/orchid-businesscard/
 
 https://www.linkedin.com/in/fox-galileo/
 
-
-![Screenshot 2025-04-15 114416](https://github.com/user-attachments/assets/10c79ac9-7092-4b68-be33-57731842efea)
+![Screenshot 2025-04-17 114341](https://github.com/user-attachments/assets/2df449dc-8828-425d-be51-ab298b23fd22)
 
 
 The AR Orchid business card is an augmented reality business card where information is only accessible by getting in close to an alien plant and reaching for objects tied to associated links.
