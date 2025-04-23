@@ -34,6 +34,7 @@
             <a-asset-item id="camera" src="https://cdn.glitch.global/61c1e008-9525-410f-b69e-c2627935b48a/polaroid.glb?v=1745365824882"></a-asset-item>
             <a-asset-item id="info" src="https://cdn.glitch.global/ded6f08b-aa57-4789-8309-05b6132a4efd/infoo.glb?v=1745367632625"></a-asset-item>
             <a-asset-item id="link" src="https://cdn.glitch.global/61c1e008-9525-410f-b69e-c2627935b48a/thisproj.glb?v=1745364757748"></a-asset-item>
+            <audio id="bg-music" src="https://cdn.glitch.global/ded6f08b-aa57-4789-8309-05b6132a4efd/radochatter.mp3?v=1745369888673"></audio>
       </a-assets>
       
       <a-entity 
@@ -130,6 +131,8 @@
       <a-entity
         light="type: ambient; intensity: 1; color: #FAFFC8;">
       </a-entity>
+
+      <a-entity sound="src: #bg-music; autoplay: true; loop: true; volume: 0.8"></a-entity>
       
       <!-- Camera with cursor -->
       <a-camera position="0 1.2 0">
