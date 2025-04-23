@@ -32,7 +32,7 @@
             <a-asset-item id="vhs" src="https://cdn.glitch.global/61c1e008-9525-410f-b69e-c2627935b48a/tape.glb?v=1745365825508"></a-asset-item>
             <a-asset-item id="tandy" src="https://cdn.glitch.global/61c1e008-9525-410f-b69e-c2627935b48a/tandy.glb?v=1745364759093"></a-asset-item>
             <a-asset-item id="camera" src="https://cdn.glitch.global/61c1e008-9525-410f-b69e-c2627935b48a/polaroid.glb?v=1745365824882"></a-asset-item>
-            <a-asset-item id="info" src="https://cdn.glitch.global/61c1e008-9525-410f-b69e-c2627935b48a/youtubetext.glb?v=1745284891446"></a-asset-item>
+            <a-asset-item id="info" src="https://cdn.glitch.global/ded6f08b-aa57-4789-8309-05b6132a4efd/infoo.glb?v=1745367632625"></a-asset-item>
             <a-asset-item id="link" src="https://cdn.glitch.global/61c1e008-9525-410f-b69e-c2627935b48a/thisproj.glb?v=1745364757748"></a-asset-item>
       </a-assets>
       
@@ -43,12 +43,20 @@
         animation-mixer>
       </a-entity>
       
-      <!-- Text Object for LinkedIn -->
+      <!-- Camera Object that links to LinkedIn -->
       <a-entity 
         gltf-model="#linkedin"
-        position="-1.5 1.2 -4"
-        scale=".02 .02 .02"
+        position="-1.5 1.4 -4"
+        scale=".015 .015 .015"
         rotation="90 0 0"
+        open-link="https://www.linkedin.com/in/fox-galileo/">
+      </a-entity>
+      
+      <a-entity 
+        gltf-model="#camera"
+        position="-1.5 1.2 -4"
+        scale=".15 .15 .15"
+        rotation="0 90 0"
         open-link="https://www.linkedin.com/in/fox-galileo/">
       </a-entity>
 
@@ -56,25 +64,68 @@
       <a-entity 
         gltf-model="#youtube"
         position="1.3 1.4 -3.5"
-        scale=".02 .02 .02"
+        scale=".015 .015 .015"
         rotation="90 0 0"
+        open-link="https://youtu.be/rSTNlv4w6ZI">
+      </a-entity>
+      
+      <a-entity 
+        gltf-model="#vhs"
+        position="1.3 1.17 -3.5"
+        scale="1 1 1"
+        rotation="90 180 20d"
         open-link="https://youtu.be/rSTNlv4w6ZI">
       </a-entity>
         
       <!-- Tandy links to GitHub -->
       <a-entity 
         gltf-model="#github"
-        position=".2 0 -3"
-        scale=".02 .02 .02"
+        position=".6 .5 -3"
+        scale=".015 .015 .015d"
         rotation="90 0 0"
         open-link="https://github.com/bansheegalileo">
       </a-entity>
       
+      <a-entity 
+        gltf-model="#tandy"
+        position=".6 0 -3"
+        scale=".3 .3 .3"
+        rotation="-20 180 15"
+        open-link="https://github.com/bansheegalileo">
+      </a-entity>
+      
+      <!-- Eyeball links to this project -->
+      <a-entity 
+        gltf-model="#link"
+        position="-.8 .5 -3"
+        scale=".01 .01 .01"
+        rotation="90 0 0"
+        open-link="https://github.com/bansheegalileo/orchid-businesscard">
+      </a-entity>
+      
+      <a-entity 
+        gltf-model="#eyeball"
+        position="-.8 0 -3"
+        scale=".3 .3 .3"
+        rotation="20 -90 15"
+        open-link="https://github.com/bansheegalileo/orchid-businesscard">
+      </a-entity>
+      
+      <!-- Information -->
       <a-entity
         gltf-model="#nameplate"
-        position="0 2 -5" 
+        position="-.2 2.4 -5" 
         scale=".01 .01 .01"
-        look-at="#curses"></a-entity>
+        look-at="#curses">
+      </a-entity>
+      
+      <a-entity
+        gltf-model="#info"
+        position="0 1.9 -5" 
+        scale=".012 .012 .012"
+        rotation="180 90"
+        look-at="#curses">
+      </a-entity>
       
       <a-entity
         light="type: ambient; intensity: 1; color: #FAFFC8;">
